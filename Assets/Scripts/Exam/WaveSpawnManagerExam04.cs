@@ -19,7 +19,7 @@ public class WaveSpawnManagerExam04 : MonoBehaviour
     {
         if (currentWave >= waveConfigurations.Length)
         {
-
+            CycleWave();
             return;
         }
 
@@ -39,6 +39,9 @@ public class WaveSpawnManagerExam04 : MonoBehaviour
     }
     public void CycleWave()
     {
-        currentWave = 0;
+        if (enableWaveCycling)
+        {
+          currentWave = 0;
+        }
     }
 }
