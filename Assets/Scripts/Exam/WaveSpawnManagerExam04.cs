@@ -19,6 +19,7 @@ public class WaveSpawnManagerExam04 : MonoBehaviour
     {
         if (currentWave >= waveConfigurations.Length)
         {
+
             return;
         }
 
@@ -35,5 +36,9 @@ public class WaveSpawnManagerExam04 : MonoBehaviour
                 waveEndTime = Time.time + waveConfigurations[currentWave].waveInterval;
             }
         }
+    }
+    public void CycleWave()
+    {
+        currentWave = 0;
     }
 }
